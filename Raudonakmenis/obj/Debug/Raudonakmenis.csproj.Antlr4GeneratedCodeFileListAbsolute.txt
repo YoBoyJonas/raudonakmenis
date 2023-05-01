@@ -1,0 +1,6 @@
+C:\Users\dzera\Documents\C#\Raudonakmenis\Raudonakmenis\obj\Debug\GrammarLexer.cs
+C:\Users\dzera\Documents\C#\Raudonakmenis\Raudonakmenis\obj\Debug\GrammarParser.cs
+C:\Users\dzera\Documents\C#\Raudonakmenis\Raudonakmenis\obj\Debug\GrammarListener.cs
+C:\Users\dzera\Documents\C#\Raudonakmenis\Raudonakmenis\obj\Debug\GrammarBaseListener.cs
+C:\Users\dzera\Documents\C#\Raudonakmenis\Raudonakmenis\obj\Debug\GrammarVisitor.cs
+C:\Users\dzera\Documents\C#\Raudonakmenis\Raudonakmenis\obj\Debug\GrammarBaseVisitor.cs
