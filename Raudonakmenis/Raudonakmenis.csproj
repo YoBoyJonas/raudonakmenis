@@ -61,6 +61,8 @@
     <None Include="obj\Debug\GrammarListener.cs" />
     <None Include="obj\Debug\GrammarParser.cs" />
     <None Include="obj\Debug\GrammarVisitor.cs" />
+    <Compile Include="obj\Debug\RedstoneVisitor.cs" />
+    <Compile Include="obj\Debug\SymbolTable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

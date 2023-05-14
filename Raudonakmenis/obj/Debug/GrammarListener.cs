@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:\Users\dzera\Documents\C#\Raudonakmenis\Raudonakmenis\Grammar.g4 by ANTLR 4.6.6
+// Generated from C:\Users\dzera\Documents\C#\Raudonakmenis1\raudonakmenis\Raudonakmenis\Grammar.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -87,17 +87,6 @@ public interface IGrammarListener : IParseTreeListener {
 	void ExitAssignment([NotNull] GrammarParser.AssignmentContext context);
 
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="GrammarParser.assignment2"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAssignment2([NotNull] GrammarParser.Assignment2Context context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="GrammarParser.assignment2"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAssignment2([NotNull] GrammarParser.Assignment2Context context);
-
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="GrammarParser.functionCall"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -142,17 +131,6 @@ public interface IGrammarListener : IParseTreeListener {
 	void ExitElseIfBlock([NotNull] GrammarParser.ElseIfBlockContext context);
 
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="GrammarParser.printStatement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterPrintStatement([NotNull] GrammarParser.PrintStatementContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="GrammarParser.printStatement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitPrintStatement([NotNull] GrammarParser.PrintStatementContext context);
-
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="GrammarParser.whileBlock"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -173,6 +151,17 @@ public interface IGrammarListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitExpression([NotNull] GrammarParser.ExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="GrammarParser.funkyOp"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFunkyOp([NotNull] GrammarParser.FunkyOpContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="GrammarParser.funkyOp"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFunkyOp([NotNull] GrammarParser.FunkyOpContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="GrammarParser.multOp"/>.
@@ -283,6 +272,28 @@ public interface IGrammarListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitClassMember([NotNull] GrammarParser.ClassMemberContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="GrammarParser.classCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterClassCall([NotNull] GrammarParser.ClassCallContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="GrammarParser.classCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitClassCall([NotNull] GrammarParser.ClassCallContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="GrammarParser.classFunctionCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterClassFunctionCall([NotNull] GrammarParser.ClassFunctionCallContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="GrammarParser.classFunctionCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitClassFunctionCall([NotNull] GrammarParser.ClassFunctionCallContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="GrammarParser.fieldDeclaration"/>.

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:\Users\dzera\Documents\C#\Raudonakmenis\Raudonakmenis\Grammar.g4 by ANTLR 4.6.6
+// Generated from C:\Users\dzera\Documents\C#\Raudonakmenis1\raudonakmenis\Raudonakmenis\Grammar.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -68,13 +68,6 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitAssignment([NotNull] GrammarParser.AssignmentContext context);
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GrammarParser.assignment2"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitAssignment2([NotNull] GrammarParser.Assignment2Context context);
-
-	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.functionCall"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -103,13 +96,6 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitElseIfBlock([NotNull] GrammarParser.ElseIfBlockContext context);
 
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GrammarParser.printStatement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitPrintStatement([NotNull] GrammarParser.PrintStatementContext context);
-
-	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.whileBlock"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -122,6 +108,13 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitExpression([NotNull] GrammarParser.ExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GrammarParser.funkyOp"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFunkyOp([NotNull] GrammarParser.FunkyOpContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.multOp"/>.
@@ -192,6 +185,20 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitClassMember([NotNull] GrammarParser.ClassMemberContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GrammarParser.classCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitClassCall([NotNull] GrammarParser.ClassCallContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GrammarParser.classFunctionCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitClassFunctionCall([NotNull] GrammarParser.ClassFunctionCallContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.fieldDeclaration"/>.
