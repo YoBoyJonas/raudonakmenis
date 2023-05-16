@@ -23,16 +23,17 @@ whileBlock: WHILE expression blockas ;
 WHILE: 'while' | 'until';
 
 expression: 
-    constant 
-    | IDENTIFIER 
-    | functionCall 
-    | classFunctionCall
-    | '(' expression ')' 
-    | '!' expression 
-    | expression multOp expression 
-    | expression addOp expression 
-    | expression compareOp expression 
-    | expression boolOp expression;
+    constant							# constantExpression
+    | IDENTIFIER						# idExpression
+    | functionCall						# functionExpression
+    | classFunctionCall					# classExpression
+    | '(' expression ')'				# paranthesesExpression
+    | '!' expression					# notExpression
+    | expression multOp expression		# multExpression
+    | expression addOp expression		# addExpression
+    | expression compareOp expression	# compareExpression
+    | expression boolOp expression		# boolExpression
+	;
     
 funkyOp: '=' | '%%' | '$$' | '@@' |  '--' | '+=' |  '-=' | '+++' | '---' |  '/=' | '*=' | '%=' | '^=';
 
@@ -57,13 +58,15 @@ classDeclaration: 'class' className '{' classBody '}';
 
 className: IDENTIFIER;
 
+printStatement : 'PRINT' '(' expression ')' ;
+
 classBody: classMember*;
 
 classMember: fieldDeclaration | methodDeclaration;
 
 classCall: className IDENTIFIER '=' 'new' className'('')'';'; 
 
-classFunctionCall: IDENTIFIER '.' methodName'(' parameterList? ')' ;
+classFunctionCall: IDENTIFIER '.' methodName'(' (expression (',' expression)*)? ')' ;
 
 fieldDeclaration: type fieldName ';';
 

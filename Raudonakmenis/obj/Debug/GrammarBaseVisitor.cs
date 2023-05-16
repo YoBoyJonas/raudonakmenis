@@ -35,6 +35,126 @@ using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 [System.CLSCompliant(false)]
 public partial class GrammarBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IGrammarVisitor<Result> {
 	/// <summary>
+	/// Visit a parse tree produced by the <c>compareExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitCompareExpression([NotNull] GrammarParser.CompareExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>idExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitIdExpression([NotNull] GrammarParser.IdExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>constantExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitConstantExpression([NotNull] GrammarParser.ConstantExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>addExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitAddExpression([NotNull] GrammarParser.AddExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>boolExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitBoolExpression([NotNull] GrammarParser.BoolExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>classExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitClassExpression([NotNull] GrammarParser.ClassExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>multExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitMultExpression([NotNull] GrammarParser.MultExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>notExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitNotExpression([NotNull] GrammarParser.NotExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>functionExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitFunctionExpression([NotNull] GrammarParser.FunctionExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>paranthesesExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitParanthesesExpression([NotNull] GrammarParser.ParanthesesExpressionContext context) { return VisitChildren(context); }
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.compileUnit"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -253,6 +373,17 @@ public partial class GrammarBaseVisitor<Result> : AbstractParseTreeVisitor<Resul
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	public virtual Result VisitClassName([NotNull] GrammarParser.ClassNameContext context) { return VisitChildren(context); }
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GrammarParser.printStatement"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitPrintStatement([NotNull] GrammarParser.PrintStatementContext context) { return VisitChildren(context); }
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.classBody"/>.

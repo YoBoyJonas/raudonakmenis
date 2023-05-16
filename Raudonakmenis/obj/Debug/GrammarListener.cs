@@ -32,6 +32,136 @@ using IToken = Antlr4.Runtime.IToken;
 [System.CLSCompliant(false)]
 public interface IGrammarListener : IParseTreeListener {
 	/// <summary>
+	/// Enter a parse tree produced by the <c>compareExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterCompareExpression([NotNull] GrammarParser.CompareExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>compareExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitCompareExpression([NotNull] GrammarParser.CompareExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>idExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterIdExpression([NotNull] GrammarParser.IdExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>idExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitIdExpression([NotNull] GrammarParser.IdExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>constantExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterConstantExpression([NotNull] GrammarParser.ConstantExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>constantExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitConstantExpression([NotNull] GrammarParser.ConstantExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>addExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterAddExpression([NotNull] GrammarParser.AddExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>addExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitAddExpression([NotNull] GrammarParser.AddExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>boolExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterBoolExpression([NotNull] GrammarParser.BoolExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>boolExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitBoolExpression([NotNull] GrammarParser.BoolExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>classExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterClassExpression([NotNull] GrammarParser.ClassExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>classExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitClassExpression([NotNull] GrammarParser.ClassExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>multExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterMultExpression([NotNull] GrammarParser.MultExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>multExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitMultExpression([NotNull] GrammarParser.MultExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>notExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterNotExpression([NotNull] GrammarParser.NotExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>notExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitNotExpression([NotNull] GrammarParser.NotExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>functionExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterFunctionExpression([NotNull] GrammarParser.FunctionExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>functionExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitFunctionExpression([NotNull] GrammarParser.FunctionExpressionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by the <c>paranthesesExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterParanthesesExpression([NotNull] GrammarParser.ParanthesesExpressionContext context);
+	/// <summary>
+	/// Exit a parse tree produced by the <c>paranthesesExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitParanthesesExpression([NotNull] GrammarParser.ParanthesesExpressionContext context);
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="GrammarParser.compileUnit"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -250,6 +380,17 @@ public interface IGrammarListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitClassName([NotNull] GrammarParser.ClassNameContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="GrammarParser.printStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterPrintStatement([NotNull] GrammarParser.PrintStatementContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="GrammarParser.printStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitPrintStatement([NotNull] GrammarParser.PrintStatementContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="GrammarParser.classBody"/>.

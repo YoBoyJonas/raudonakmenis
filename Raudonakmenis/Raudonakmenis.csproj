@@ -63,6 +63,7 @@
     <None Include="obj\Debug\GrammarVisitor.cs" />
     <Compile Include="obj\Debug\RedstoneVisitor.cs" />
     <Compile Include="obj\Debug\SymbolTable.cs" />
+    <Compile Include="obj\Debug\TestClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +74,11 @@
       <CustomToolNamespace>Raudonakmenis</CustomToolNamespace>
     </Antlr4>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\testas.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

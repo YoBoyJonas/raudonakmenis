@@ -33,6 +33,86 @@ using IToken = Antlr4.Runtime.IToken;
 [System.CLSCompliant(false)]
 public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <summary>
+	/// Visit a parse tree produced by the <c>compareExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCompareExpression([NotNull] GrammarParser.CompareExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>idExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIdExpression([NotNull] GrammarParser.IdExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>constantExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitConstantExpression([NotNull] GrammarParser.ConstantExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>addExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAddExpression([NotNull] GrammarParser.AddExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>boolExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBoolExpression([NotNull] GrammarParser.BoolExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>classExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitClassExpression([NotNull] GrammarParser.ClassExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>multExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitMultExpression([NotNull] GrammarParser.MultExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>notExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNotExpression([NotNull] GrammarParser.NotExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>functionExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFunctionExpression([NotNull] GrammarParser.FunctionExpressionContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by the <c>paranthesesExpression</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitParanthesesExpression([NotNull] GrammarParser.ParanthesesExpressionContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.compileUnit"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -171,6 +251,13 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitClassName([NotNull] GrammarParser.ClassNameContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GrammarParser.printStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPrintStatement([NotNull] GrammarParser.PrintStatementContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.classBody"/>.

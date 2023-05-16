@@ -34,5 +34,9 @@ namespace Raudonakmenis.obj.Debug
         {
             return table.Count;
         }
+        public void add(String name, object value)
+        {
+            table[name] = value;
+        }
     }
 }

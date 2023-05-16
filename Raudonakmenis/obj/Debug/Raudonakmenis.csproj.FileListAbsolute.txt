@@ -30,3 +30,5 @@ C:\Users\dzera\Documents\C#\Raudonakmenis1\raudonakmenis\Raudonakmenis\obj\Debug
 C:\Users\dzera\Documents\C#\Raudonakmenis1\raudonakmenis\Raudonakmenis\obj\Debug\Raudonakmenis.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
 C:\Users\dzera\Documents\C#\Raudonakmenis1\raudonakmenis\Raudonakmenis\obj\Debug\Raudonakmenis.csproj.CoreCompileInputs.cache
 C:\Users\dzera\Documents\C#\Raudonakmenis1\raudonakmenis\Raudonakmenis\obj\Debug\Raudonakmenis.csproj.CopyComplete
+C:\Users\dzera\Documents\C#\Raudonakmenis1\raudonakmenis\Raudonakmenis\obj\Debug\Raudonakmenis.csprojAssemblyReference.cache
+C:\Users\dzera\Documents\C#\Raudonakmenis1\raudonakmenis\Raudonakmenis\bin\Debug\obj\Debug\testas.txt
