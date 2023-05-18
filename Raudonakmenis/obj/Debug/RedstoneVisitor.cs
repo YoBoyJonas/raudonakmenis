@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Antlr4.Runtime.Misc;
 
 namespace Raudonakmenis.obj.Debug
 {
@@ -62,6 +63,12 @@ namespace Raudonakmenis.obj.Debug
 
             return null;
         }
+
+        public override object VisitConstant([NotNull] GrammarParser.ConstantContext context)
+        {
+            return base.VisitConstant(context.);
+        }
+
         public override object VisitAssignment(GrammarParser.AssignmentContext context) {
             string typeName = context.type().GetText();
             var value = VisitExpression(context.expression());
